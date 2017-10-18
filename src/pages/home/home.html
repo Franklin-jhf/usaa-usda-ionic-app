@@ -4,17 +4,17 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>
-      Split pane template
+      Nutrient Database Search
     </ion-title>
   </ion-navbar>
-  <ion-toolbar>
+  <!-- <ion-toolbar>
     <ion-searchbar 
       color="primary"
      [(ngModel)]="queryText"
      (search)="searchFood($event)"
      placeholder="Search Food Report">
     </ion-searchbar>
-  </ion-toolbar>
+  </ion-toolbar> -->
   <!-- <h1>Hi!!!!! what's good </h1>
     <ion-list>
       <ion-item *ngFor='let item of food'>
@@ -33,17 +33,17 @@
     </ion-header>
     <ion-content>
       <ion-list>
-        <button ion-item ion-item (click)="setCategory('submenu')">
-          Submenu (left)
-        </button>
         <button ion-item (click)="setCategory('home')">
           Home
         </button>
+        <button ion-item ion-item (click)="setCategory('submenu')">
+          Favorites
+        </button>
         <button ion-item (click)="setCategory('friends')">
-          Friends (right)
+          About
         </button>
         <button ion-item ion-item (click)="setCategory('events')">
-          Events (on Top)
+          Contact
         </button>
       </ion-list>
     </ion-content>

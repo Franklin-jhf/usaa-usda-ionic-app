@@ -1,18 +1,27 @@
 <!-- The Main Content -->
 <ion-content padding>
+  <ion-toolbar>
+    <ion-searchbar 
+      color="primary"
+     [(ngModel)]="queryText"
+     (search)="searchFood($event)"
+     placeholder="Search Food Report">
+    </ion-searchbar>
+  </ion-toolbar>
   <ion-card>
 
     <ion-card-header>
-      The main content
+      Welcome!
     </ion-card-header>
     <ion-list>
       <ion-item *ngFor='let item of food'>
-        {{ item.name }}
+        <h3>{{ item.name }}</h3>
+        <button ion-button (click)="showFood(item.ndbno)">?</button>
       </ion-item>
     </ion-list>
 
     <ion-card-content>
-      Here is the main content.
+      Search a food for more info
     </ion-card-content>
 
   </ion-card>

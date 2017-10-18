@@ -40,6 +40,11 @@ export class HomePage {
       );
   }
 
+
+  // searchFood(key:any){
+  //   this.ServiceProvider.searchFood(key.target.value);
+  // }
+
   ionViewDidLoad() {
     this.rootPage = MainContentPage;
   }
@@ -49,7 +54,7 @@ export class HomePage {
       case 'home':
         this.rootPage = MainContentPage;
         break;
-      case 'friends':
+      case 'favorites':
         this.rootPage = FriendPage;
         break;
       case 'events':

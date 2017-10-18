@@ -13,6 +13,7 @@ import { FoodApiService } from '../providers/food-api-service';
 import { MainContentPage } from '../pages/main-content/main-content';
 import { FriendPage } from '../pages/friend/friend';
 import { EventsPage } from '../pages/events/events';
+import { FoodPage } from '../pages/foodinfo/foodinfo';
 
 
 
@@ -22,7 +23,8 @@ import { EventsPage } from '../pages/events/events';
     HomePage,
     MainContentPage,
     FriendPage,
-    EventsPage
+    EventsPage,
+    FoodPage
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,8 @@ import { EventsPage } from '../pages/events/events';
     HomePage,
     MainContentPage,
     FriendPage,
-    EventsPage
+    EventsPage,
+    FoodPage
   ],
   providers: [
     StatusBar,
