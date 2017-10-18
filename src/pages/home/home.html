@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      Split pane template
+    </ion-title>
+  </ion-navbar>
+  <ion-toolbar>
+    <ion-searchbar 
+      color="primary"
+     [(ngModel)]="queryText"
+     (search)="searchFood($event)"
+     placeholder="Search Food Report">
+    </ion-searchbar>
+  </ion-toolbar>
+  <!-- <h1>Hi!!!!! what's good </h1>
+    <ion-list>
+      <ion-item *ngFor='let item of food'>
+        {{ item.name }}
+      </ion-item>
+    </ion-list> -->
+</ion-header>
+
+<ion-content padding>
+  <ion-split-pane>
+    <ion-menu id="mainmenu" side="left" [content]="content">
+      <ion-header>
+        <!--ion-toolbar>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar-->
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <button ion-item ion-item (click)="setCategory('submenu')">
+          Submenu (left)
+        </button>
+        <button ion-item (click)="setCategory('home')">
+          Home
+        </button>
+        <button ion-item (click)="setCategory('friends')">
+          Friends (right)
+        </button>
+        <button ion-item ion-item (click)="setCategory('events')">
+          Events (on Top)
+        </button>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-menu id="submenu" side="left" [content]="content">
+    <ion-header>
+      <!--ion-toolbar>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar-->
+  </ion-header>
+  <ion-content>
+      <ion-list>
+        <button ion-item (click)="setCategory('mainmenu')">
+          Back
+        </button>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-nav id="nav" main #content [root]="rootPage"></ion-nav>
+  </ion-split-pane>
+
+</ion-content>
